@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="gungun-page">
+    <meta name="author" content="gungun">
+    <meta name="keywords" content="">
+    <meta name="robots" content="all">
+    <title> {$site.name}</title>
+    <link rel="stylesheet" href="/moban1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/moban1/css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/moban1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/moban1/css/owl.carousel.css">
+    <link rel="stylesheet" href="/moban1/css/owl.transitions.css">
+</head>
+
+<body>
+
+{include file="public/nav" /}
+{include file="public/search" /}
+
+<!-- 轮播图 -->
+
+<!-- <div id="top-banner-and-menu" class="homepage2">
+    <div class="container">
+        <div class="col-xs-12 no-padding">
+            <div id="owl-demo" class="owl-carousel">
+                <a class="item"><img style="width: 100%" src="/img/简约清新数码笔记本促销活动banner@凡科快图.png" alt=""></a>
+                <a class="item"><img style="width: 100% "  src="/img/简约清新时尚美颜手机促销活动banner@凡科快图.png" alt=""></a>
+                <a class="item"><img style="width: 100% "  src="/img/简约清新夏日电器促销活动banner@凡科快图.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+
+
+
+
+    <ul class="nav nav-tabs">
+        
+ 
+        <!-- 从数据库拿到分类并显示 -->
+             {volist name='list' id='user'}
+           
+            <li class=""><a href="{:url('view',['id'=>$user.id])}">{$user['name']}</a></li>
+              {/volist}
+
+
+    </ul>
+
+    <div class="product-item">
+         {volist name='result' id='user'}
+        <div class="col-sm-3 col-md-2  no-margin product-content">
+            <div class="image">
+                <a href="{:url('details',['id'=>$user.id])}">
+                    <img alt="" src="{$user['image']}"/>
+                </a>
+            </div>
+            <h3 class="title"><a> {$user['title']}</a></h3>
+            <p class="desc">{$user['content']}</p>
+            <p class="price">￥{$user['price']}</p>
+        </div>
+        {/volist}
+    </div>
+ 
+    </div>
+
+</div>
+
+<!--  --><!-- /#footer -->
+<!-- ============================================================= FOOTER : END ============================================================= -->
+<!-- /.wrapper -->
+<script src="/moban1/js/jquery.min.js"></script>
+<script src="/moban1/js/bootstrap.min.js"></script>
+<script src="/moban1/js/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#owl-demo').owlCarousel({
+            items: 1,
+            autoPlay: true
+        });
+    });
+
+    $(window).bind("load", function () {
+        $('.show-theme-options').delay(2000).trigger('click');
+    });
+</script>
+
+</body>
+</html>

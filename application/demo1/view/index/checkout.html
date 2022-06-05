@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="gungun-page">
+    <meta name="author" content="gungun">
+    <meta name="keywords" content="">
+    <meta name="robots" content="all">
+    <title> {$site.name}</title>
+    <link rel="stylesheet" href="/moban1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/moban1/css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/moban1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/moban1/css/owl.carousel.css">
+    <link rel="stylesheet" href="/moban1/css/owl.transitions.css">
+    <link rel="stylesheet" href="/moban1/css/orange.css">
+</head>
+
+<body>
+{include file="public/nav" /}
+
+
+<!-- ========================================= CONTENT ========================================= -->
+<section id="checkout-page">
+    <div class="container">
+        <div class="col-xs-12 no-margin">
+
+            <div class="billing-address">
+                <h2 class="border h1">订单详情</h2>
+
+
+
+
+                <form method="post" action="pay">
+
+                    <div class="row field-row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label>姓名</label>
+                            <input class="le-input" value={$name}>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+        
+                        </div>
+
+                    </div><!-- /.field-row -->
+
+                    <div class="row field-row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label>详细地址</label>
+                            <input class="le-input" data-placeholder="street address" 
+                           name="address" value={$address}>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            
+                        </div>
+                    </div><!-- /.field-row -->
+
+                  <div class="row field-row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label>手机号码</label>
+                            <input class="le-input" data-placeholder="street address" 
+                           name="mobile" value="{$mobile}">
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            
+                        </div>
+                    </div><!-- /.field-row -->
+
+                    <input type="hidden" name='id' value="{$id}">
+                    <input type="hidden" name='goodsid' value="{$goodsid}">
+                <button class="le-button big">去支付</button>
+                <!-- <a href="#" class="le-button big">去支付</a> -->
+      
+
+                </form>
+            </div><!-- /.billing-address -->
+
+
+
+
+
+            <section id="your-order">
+                <h2 class="border h1">商品信息</h2>
+                <form>
+                    <div class="row no-margin order-item">
+                        <div class="col-xs-12 col-sm-2 ">
+                           
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 ">
+                            <div class="title"><a href="{:url('details',['id'=>$goodsid])}">{$title} </a></div>
+                          
+                        </div>
+
+                        <div class="col-xs-12 col-sm-2 no-margin">
+                            <div class="price">{$price}</div>
+                        </div>
+                    </div>
+                 
+                </form>
+            </section> 
+
+           
+
+           
+
+
+
+        </div><!-- /.col -->
+    </div><!-- /.container -->
+</section><!-- /#checkout-page -->
+<!-- ========================================= CONTENT : END ========================================= -->
+
+
+<!-- ============================================================= FOOTER : END ============================================================= -->
+<!-- /.wrapper -->
+<script src="/moban1/js/jquery.min.js"></script>
+<script src="/moban1/js/bootstrap.min.js"></script>
+<script src="j/moban1/s/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        if ($('.le-checkbox').length > 0) {
+            $('.le-checkbox').after('<i class="fake-box"></i>');
+        }
+        //Radio Button
+        if ($('.le-radio').length > 0) {
+            $('.le-radio').after('<i class="fake-box"></i>');
+        }
+
+    });
+</script>
+
+</body>
+</html>

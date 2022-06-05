@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="gungun-page">
+    <meta name="author" content="gungun">
+    <meta name="keywords" content="">
+    <meta name="robots" content="all">
+    <title> {$site.name}购物车</title>
+    <link rel="stylesheet" href="/moban1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/moban1/css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/moban1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/moban1/css/owl.carousel.css">
+    <link rel="stylesheet" href="/moban1/css/owl.transitions.css">
+</head>
+
+<body>
+{include file="public/nav" /}
+
+<!-- ============================================================= HEADER : END ============================================================= -->
+<section id="cart-page">
+    <div class="container">
+        <!-- ========================================= CONTENT ========================================= -->
+        <div class="col-xs-12 col-md-9 items-holder no-margin">
+
+
+
+
+
+
+
+
+
+{volist name='shoppingcart' id='user'}
+            <div class="row no-margin cart-item">
+                <div class="col-xs-12 col-sm-2 no-margin">
+                    <a href="{:url('details',['id'=>$user.id])}" class="thumb-holder">
+                        <img class="lazy" alt="" src="{$user['image']}"/>
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-2">
+                    <div class="title">
+                        <a href="{:url('details',['id'=>$user.id])}">{$user['title']} </a>
+                    </div>
+                    <!-- <div class="brand">sony</div> -->
+                </div>
+
+                <div class="col-xs-12 col-sm-2 no-margin">
+                {$user['content']}
+                </div>
+
+                <div class="col-xs-12 col-sm-2 no-margin">
+                    <div class="price">
+                        ￥{$user['price']}
+                    </div>
+  <!--                   <a class="close-btn" href="#">
+                        
+                    </a> -->
+                </div>
+
+
+             <div class="col-xs-12 col-sm-2 no-margin">
+                    <div class="price">
+
+
+                                              <form class="navbar-form navbar-left" role="search" action="" method="post">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control"  name="delid" 
+                                                        value={$user['id']}>
+                                                    </div>
+                                                    <button class="btn btn-primary" type="submit">删除订单</button>
+                                                        </form>
+
+                        
+                    </div>
+    
+                </div>
+
+                <div class="col-xs-12 col-sm-2 no-margin">
+                    <div class="price">
+
+
+                                                   <form class="navbar-form navbar-left" role="search" action="checkout" method="post">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control"  name="id" 
+                                                        value={$user['id']}>
+                                                    </div>
+                                                    <button class="btn btn-primary" type="submit">去下单</button>
+                                                        </form>
+                        
+                    </div>
+    
+                </div>
+
+
+            </div><!-- /.cart-item -->
+{/volist}
+
+        </div>
+
+                    <div class="buttons-holder">
+                        <form class=" navbar-left" role="search" action="logout" method="post">
+                    <div class="form-group">
+                        
+                    </div>
+                    <button class="le-button big" type="submit">退出登录</button>
+                        </form>
+
+
+                        <form class=" navbar-right" role="search" action="order" method="post">
+                    <div class="form-group">
+                        
+                    </div>
+         
+                    <button class="le-button big" type="submit">订单状态</button>
+                        </form>
+
+
+
+
+
+
+ <div class="col-xs-12 col-md-3 no-margin sidebar ">
+            <div class="widget cart-summary">
+                <h1 class="border">个人信息</h1>
+                <div class="body">
+                    <ul class="tabled-data no-border inverse-bold">
+                        <li>
+                            <label>当前用户</label>
+                            <div class="value pull-right">{$name}</div>
+                        </li>
+                        <li>
+                            <label>余额</label>
+                            <div class="value pull-right">￥{$money}</div>
+                        </li>
+                    </ul>
+          <!--           <ul id="total-price" class="tabled-data inverse-bold no-border">
+                        <li>
+                            <label>order total</label>
+                            <div class="value pull-right">$8434.00</div>
+                        </li>
+                    </ul> -->
+
+
+
+
+
+
+
+                </div>
+            </div><!-- /.widget -->
+        </div><!-- /.sidebar -->
+
+
+                                               
+
+
+
+
+
+
+
+
+
+        <!-- ========================================= CONTENT : END ========================================= -->
+
+        <!-- ========================================= SIDEBAR ========================================= -->
+
+
+
+        <!-- ========================================= SIDEBAR : END ========================================= -->
+    </div>
+</section>        <!-- ============================================================= FOOTER ============================================================= -->
+
+<!-- ============================================================= FOOTER : END ============================================================= -->
+<!-- /.wrapper -->
+<script src="/moban1/js/jquery.min.js"></script>
+<script src="/moban1/js/bootstrap.min.js"></script>
+<script src="/moban1/js/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#owl-demo').owlCarousel({
+            items: 1,
+            autoPlay: true
+        });
+    });
+
+    $(window).bind("load", function () {
+        $('.show-theme-options').delay(2000).trigger('click');
+    });
+</script>
+
+</body>
+</html>

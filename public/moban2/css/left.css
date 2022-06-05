@@ -1,0 +1,620 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.fff{
+	display: none;
+}
+.big{
+	width: 1180px;
+	/*border: 1px solid red;*/
+	position: relative;
+	margin: auto;
+	/*margin-left: 5px;*/
+	margin-top: 210px;
+	margin-bottom: 40px;
+}
+.left{
+	width: 175px;
+	height: 601px;
+	border: 1px solid #D3D3D3;
+	background: #fff;
+	margin-left: 8px;
+}
+.left-mark{
+	padding: 15px;
+	width: 143px;
+	height: 28px;
+	border-bottom: 1px solid  #D3D3D3;
+}
+.left ul{
+	width: 173px;
+	height: 540px;
+	list-style: none;
+}
+.left ul li{
+	width: 173px;
+	height: 40px;
+	list-style: none;	
+}
+.left ul li span{
+	display: block;
+	line-height: 40px;
+	font-size: 14px;
+	padding: 0px 15px;
+	color: #666;
+	text-decoration: none;
+}
+.left ul li h3{
+	line-height: 40px;
+    font-size: 16px;
+    margin: 0px 15px;
+    color: #333;
+    position: relative;
+}
+.icon.user{
+	vertical-align: middle;
+    width: 24px;
+    height: 28px;
+    background-position: 1px -15px;
+    
+}
+.icon{
+	display: inline-block;
+    background-image:url(../img/icons.png);
+    background-repeat: no-repeat;
+    font-style: normal;
+}
+.icon.right1{
+	width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: 33px -449px;
+}
+.left ul li span:hover{
+	cursor: pointer;
+	color: orange;
+	text-decoration:underline;
+}
+/*我的账户*/
+
+.right{
+	position: absolute;
+	top: 0px;
+	width: 983px;
+	height: 355px;
+	border: 1px solid #D3D3D3;
+	margin-left: 195px;
+}
+.right-list{
+	
+	background-color: #FEF4EB;
+	width:983px;
+	height: 130px;
+	border-bottom: 1px solid  #D3D3D3;		
+}
+.user-date{
+	width: 953px;
+	height: 100px;
+	padding: 15px;
+	
+}
+.person{
+	width: 400px;
+	height: 100px;
+	float: left;
+	line-height:100px;
+}
+.cover{
+	width: 100px;
+	height: 100px;
+	margin-right: 10px;
+	float: left;
+}
+.date-list{
+	width:553px ;
+	height: 100px;
+	overflow: hidden;
+}
+.right .item{
+	width: 33.33%;
+	height: 100px;
+	text-align: center;
+	float: left;
+	
+}
+.right .item .t{
+	margin-top: 25px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color:#ff6c00;
+}
+.right .item span{
+	display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+	
+}
+
+.right-label{
+	float: none;
+	width: 953px;
+	height: 120px;
+	padding: 30px 15px;
+	overflow: hidden;
+	
+}
+.right .sign{
+	height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0px 0px 20px;
+}
+.right .sign i{
+	color:#ff6c00 ;
+	font-size:24px;
+}
+
+.right .view-list{
+	overflow: hidden;
+    margin: 0 -40px;
+    position: relative;
+}
+.right .progress{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.right .inside{
+	height: 6px;
+    background: #d3d3d3;
+    margin: 18px 75px;
+    overflow: hidden;
+}
+.right .in{
+	float: left;
+    width: 0%;
+    height: 6px;
+    background: #ff6c00;
+}
+
+.right .view-list .item{
+	float: left;
+    width: 14%;
+    text-align: center;
+    position: relative;
+}
+.right .view-list .item .rco{
+	display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    background: #d3d3d3;
+}
+.right .view-list .item  .active{
+	background: #ff6c00;
+	
+   
+}
+.right .right-list:nth-child(2){
+	margin: 0 0 20px 0;
+    border: 1px solid #d3d3d3;
+    background: #fff;
+}
+.right .right-1{
+	width: 983px;
+	margin: 0 0 0 195px;
+    min-height: 599px;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+}
+.right .right-1-mark{
+	padding: 20px 15px;
+    font-size: 16px;
+    height: 18px;
+    color: #018DE2;
+    border-bottom: 1px solid #d3d3d3;
+}
+/*我的订单*/
+
+.right-1{
+	position: absolute;
+	top: 0px;
+	width: 983px;
+	margin: 0 0 0 195px;
+    min-height: 599px;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+}
+.order-state{
+	margin: 20px 0px 0px 0px;
+    overflow: hidden;
+    height: 20px;
+    padding: 0 15px;
+    
+}
+.right-1-mark{
+	padding: 20px 15px;
+    font-size: 16px;
+    height: 18px;
+    color: #018DE2;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.right-1 .order-state a{
+	float: left;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px;
+    text-decoration: none;
+}
+.right-1 .order-state span{
+	float: left;
+    width: 1px;
+    height: 20px;
+    margin: 0px 10px;
+    background: #d3d3d3;
+}
+.right-1 .order-state .active{
+	    background: #FFE3D3;
+}
+.right-1 .order-state .del{
+	float: right;
+}
+
+.emty-view{
+    padding: 180px 0px 0px;
+    text-align:center;
+}
+.emty-guide{
+	overflow: hidden;
+    text-align:center;
+}
+.emty-guide .cover{
+	    width: 120px;
+	    height: 133px;
+	    float: none;
+	    margin-right: 0px;
+}
+.emty-btns{
+	display: inline-block;
+    height: 133px;
+    margin: 0 0 0 40px;
+    overflow: hidden;
+    width: 170px;
+}
+.emty-view .emty-guide span{
+	color:#666;
+    display: inline-block;
+    font-size: 18px;
+    margin: 20px 0 0;
+    text-align: left;
+    width: 100%;
+    background: none;
+}
+.emty-view .emty-guide a{
+	background: #ff6c00 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 44px;
+    line-height: 44px;
+    margin: 40px 0 0;
+    text-align: center;
+    text-decoration: none;
+}
+/*我的积分*/
+.address-list{
+	overflow: hidden;
+    margin: 15px;
+}
+.address-list span{
+	width: auto;
+	background: none;
+}
+.integral{
+    border: 1px solid #d3d3d3;
+    border-bottom: 0;
+}
+.integral table{
+	width: 100%;
+}
+.address-list table tr th{
+	font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    background: #eaeaea;
+    color: #333;
+    font-weight: normal;
+}
+.address-list table tr td{
+	font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+.right-1{
+	position: absolute;
+	top: 0px;
+	width: 983px;
+	margin: 0 0 0 195px;
+    min-height: 599px;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+}
+.right-1-mark{
+	padding: 20px 15px;
+    font-size: 16px;
+    height: 18px;
+    color: #018DE2;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.right-1 .right-1-mark a{
+	float: left;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px;
+    text-decoration: none;
+}
+/*易和券*/
+.right-1{
+	position: absolute;
+	top: 0px;
+	width: 983px;
+	margin: 0 0 0 195px;
+    min-height: 599px;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+}
+.right-1-mark{
+	padding: 20px 15px;
+    font-size: 16px;
+    height: 18px;
+    color: #018DE2;
+    border-bottom: 1px solid #d3d3d3;
+}
+.myorder-list{
+	    margin: 20px 0 0 0;
+}
+.empty-view{
+	padding: 180px 0 0;
+    text-align: center;
+
+}
+.empty-guide{
+	overflow: hidden;
+    text-align: center;
+}
+.empty-guide .guide-btns{
+	display: inline-block;
+    height: 133px;
+    margin: 0 0 0 40px;
+    overflow: hidden;
+    width: 170px;
+}
+.empty-guide .guide-btns span{
+	color: #666;
+    display: inline-block;
+    font-size: 18px;
+    margin: 20px 0 0;
+    text-align: left;
+    width: 100%;
+    background: none;
+}
+.guide-btns a{
+	background: #ff6c00 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 44px;
+    line-height: 44px;
+    margin: 40px 0 0;
+    text-align: center;
+    text-decoration: none;
+}
+/*个人资料*/
+.person-info{
+	margin: 30px 15px 15px 15px;
+}
+.person-info .item{
+	/*border: 1px solid yellow;*/
+}
+ul{
+	list-style: none;
+	display: block;
+}
+
+.person-info .item .label{
+	float: left;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size: 16px;
+    width: 120px;
+    text-align: right;
+    
+}
+.s1{
+	height: 49px;
+    line-height: 49px;
+}
+.person-info .item .info-data{
+	margin: 0 0 0 130px;
+}
+.person-info .item .info-data .face{
+	width: 39px;
+	height: 39px;
+	width: 49px;
+    height: 49px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.person-info .item .info-data .action{
+	float: left;
+    height: 49px;
+    line-height: 49px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #008CE1;
+}
+.right-1 .person-info .item{
+	overflow: hidden;
+    margin: 0 0 20px 0;
+}
+.person-info .item .info-data .nickname{
+	height: 25px;
+    line-height: 25px;
+    box-sizing: border-box;
+    padding: 3px 8px;
+    font-size: 16px;
+    color: #666;
+    background: #f4f4f4;
+    border: 1px solid #d3d3d3;
+    margin-top: 8px;
+}
+.person-info .item .info-data .submit{
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    background: #ff6c00;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Microsoft Yahei";
+}
+.person-info input{
+	/*border: 1px solid red;*/
+	height: 25px;
+	line-height: 25px;
+}
+.right-1 .right-1-mark .add-btn{
+	float: right;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #fff;
+    background: #ff6c00;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: -8px;
+    cursor: pointer;
+}
+.right-1 .address-list .empty-desc{
+	margin: 220px 0 0 0;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    color: #999;
+    text-align: center;
+}
+.right-1 .address-list .empty-desc a{
+	color: #ff6c00;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 0 10px;
+   	cursor: pointer;
+	
+}
+.right-1 .address-list .empty-desc .icon{
+	display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-position: -357px 0px;
+    vertical-align: -20%;
+    margin: 0px 10px;
+}
+.right-1 .business-list{
+	overflow: hidden;
+    margin: 0;
+}
+/*修改密码*/
+.right-1 .form-area{
+	width: 325px;
+    padding: 20px 30px;
+}
+.right-1 .form-area input{
+	/*border: 1px solid red;*/
+	height: 30px;
+	line-height: 30px;
+	padding: 5px 10px 5px 10px;
+}
+.right-1 .form-area .form-space{
+	height: 30px;
+	border: 0;
+}
+/*我的消息*/
+.right-1 .address-list{
+	overflow: hidden;
+    margin: 15px;
+}
+.right-1 .address-list table{
+	width: 100%;
+}
+.right-1 .address-list table tr th{
+	font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    background: #eaeaea;
+    color: #333;
+    font-weight: normal;
+}
+.right-1 .address-list .cool-title{
+	width: 200px;
+    padding: 0 0 0 15px;
+}
+.right-1 .address-list .coll-time{
+	
+}
+.right-1 .address-list .coll-state{
+	width: 120px;
+}
+.right-1 .address-list .coll-do{
+	    width: 120px;
+}
+/*添加地址*/
+.right-1 .form-box{
+	padding: 40px;
+    width: 590px;
+    overflow: hidden;
+}
+
+.add_address{
+	width: 100%;
+}
+.add_address input,.add_address select{
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	padding: 3px 1px 3px 1px;
+}
+

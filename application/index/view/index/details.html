@@ -1,0 +1,65 @@
+{include file="public/header" /}
+
+
+
+
+
+{volist name='details' id='user'}
+ <div class="row">
+ 	<div class="col-sm-6 col-md-3">
+
+	</div>
+
+    <div class="col-sm-12 col-md-6">
+    	 <div class="thumbnail">
+    	 	<div class="row">
+    	 		<div class="col-sm-12 col-md-6">
+    	 			 <img  src="{$user['image']}"
+                    style="height: 300px;" 
+                    alt="{$user['title']}">  
+    	 		</div>
+    	 		<div class="col-sm-12 col-md-6">
+    	 			<div class="caption">
+		                <h3>{$user['title']}</h3>
+		                <p>{$user['content']}</p>
+		                <p>￥{$user['price']}</p>
+									              <form class="navbar-form navbar-left" role="search" action="" method="post">
+											        <div class="form-group">
+											            <input type="hidden" class="form-control"  name="shoppingcart" value={$user['id']}>
+											            <input type="hidden" class="form-control"  name="title" 
+											            value={$user['title']}>
+											            <input type="hidden" class="form-control"  name="price"
+											             value={$user['price']}>
+											        </div>
+											        <button type="submit" class="btn btn-default" >加入购物车 </button>
+											            </form>
+           			</div>
+    	 		</div>
+           	</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+ 		
+	</div>
+
+</div>
+{/volist}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

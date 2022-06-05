@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html>  
+<head lang="en">  
+    <meta charset="UTF-8">  
+    <title>index</title>
+
+  
+</head>  
+<body>  
+<input  id="button" type="button" value="点击" style=" margin-left:50% ;font-size: 124px;">  
+ <p id="view" style=" font-size: 124px; text-align: center;">X</p>  
+
+<script>  
+	
+    var btn = document.getElementById("button");  
+    btn.onclick =function(){
+    	var num = Math.round(Math.random()*5) + 1;  
+        console.log(num);
+        var y=document.getElementById("view");
+    	y.innerHTML=num;
+
+    }  
+</script>  
+</body>  
+</html>  

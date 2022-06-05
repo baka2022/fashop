@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>拼西西</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">菜鸟教程</a>
+    </div>
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+    </form>
+    </div>
+</nav> -->
+<div class="container">
+<nav class="navbar navbar-default " role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="{:url('index/index','');}">首页</a>
+    </div>
+
+    <div>
+        <ul class="nav navbar-nav ">
+             {volist name='list' id='user'}
+            <li class=""><a href="{:url('view',['id'=>$user.id])}"> {$user['name']} </a></li>
+              {/volist}
+        </ul>
+         <ul class="nav navbar-nav">
+            <li ><a href="{:url('index/shoppingcart','');}"> 购物车 </a></li>
+            <li><a href="{:url('user/login','');}"> 会员 </a></li>
+            <!-- <li><a href="{:url('index/search','');}"> 搜索 </a></li> -->
+        </ul>
+
+
+    </div>
+               <div class="container-fluid">
+
+              <form class="navbar-form navbar-left" role="search" action="" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="搜索" name="search">
+        </div>
+        <button type="submit" class="btn btn-default" >搜索 </button>
+            </form>
+            </div>
+    </div>
+</nav>
+

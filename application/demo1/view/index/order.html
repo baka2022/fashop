@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="gungun-page">
+    <meta name="author" content="gungun">
+    <meta name="keywords" content="">
+    <meta name="robots" content="all">
+    <title> {$site.name}订单状态</title>
+    <link rel="stylesheet" href="/moban1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/moban1/css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/moban1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/moban1/css/owl.carousel.css">
+    <link rel="stylesheet" href="/moban1/css/owl.transitions.css">
+</head>
+
+<body>
+{include file="public/nav" /}
+
+<!-- ============================================================= HEADER : END ============================================================= -->
+<section id="cart-page">
+    <div class="container">
+        <!-- ========================================= CONTENT ========================================= -->
+        <div class="col-xs-12 col-md-9 items-holder no-margin">
+
+<table class="table table-bordered">
+  <caption>订单状态</caption>
+  <thead>
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>订单状态</th>
+      <th>收货确认</th>
+    </tr>
+  </thead>
+  <tbody>
+     {volist name='data' id='data'}
+    <tr>
+      <td><a href="{:url('details',['id'=>$data['goodsid']])}"> {$data['title']}</a></td>
+      <td>{$data['price']}</td>
+      <td>{$data['state']}</td>
+      <td>
+
+
+                                                     <form class="navbar-form navbar-left" action="confirm" method="post">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control"  name="id" 
+                                                        value={$data['id']}>
+                                                    </div>
+                                                    <button class="btn btn-primary" type="submit">收货确认</button>
+                                                        </form>
+
+
+
+
+      </td>
+    </tr>
+    {/volist}
+  </tbody>
+</table>
+
+ 
+
+
+
+  
+    </div>
+</section>        
+
+<script src="/moban1/js/jquery.min.js"></script>
+<script src="/moban1/js/bootstrap.min.js"></script>
+<script src="/moban1/js/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#owl-demo').owlCarousel({
+            items: 1,
+            autoPlay: true
+        });
+    });
+
+    $(window).bind("load", function () {
+        $('.show-theme-options').delay(2000).trigger('click');
+    });
+</script>
+
+</body>
+</html>

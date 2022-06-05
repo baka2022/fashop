@@ -1,0 +1,30 @@
+{include file="public/header" /}
+
+
+
+
+{volist name='view' id='user'}
+    <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <a href="{:url('details',['id'=>$user.id])}">
+                    <img  src="{$user['image']}"
+                    style="height: 300px;" 
+                    alt="{$user['title']}">  
+                </a>
+                <div class="caption">
+                <h3>{$user['title']}</h3>
+                <p>￥{$user['price']}</p>
+            </div>
+        </div>
+    </div>
+{/volist}
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

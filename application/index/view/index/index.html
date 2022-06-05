@@ -1,0 +1,49 @@
+
+{include file="public/header" /}
+
+<!-- <div class="row">
+    <div class="col-sm-6 col-md-3">
+          <a href="">
+                       <div class="thumbnail">
+                    <img  src="//img.alicdn.com/imgextra/i2/1691322032/TB1HGH.bMkLL1JjSZFpXXa7nFXa_!!0-item_pic.jpg"
+                    style="height: 300px;" 
+                         alt="夏洛的网">
+                    <div class="caption">
+                        <h3>夏洛的网</h3>
+                        <p>￥18.2</p>
+                    </div>
+                 </div>
+          </a> 
+    </div>
+
+
+
+</div> -->
+
+
+{volist name='result' id='user'}
+    <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <a href="{:url('details',['id'=>$user.id])}">
+                    <img  src="{$user['image']}"
+                    style="height: 300px;" 
+                    alt="{$user['title']}">
+                </a>
+                <div class="caption">
+                    <h3>{$user['title']}</h3>
+                    <p>￥{$user['price']}</p>
+                </div>
+            </div>
+    </div>
+{/volist}
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

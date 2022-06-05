@@ -1,0 +1,95 @@
+{include file="public/header" /}
+
+
+
+
+
+
+<table class="table table-bordered">
+    <caption>购物车</caption>
+    <thead>
+        <tr>
+            <th>商品名称</th>
+            <th>价格</th>
+            <th>详情</th>
+            <th>去支付</th>
+            <th>删除订单</th>
+            <th>确认收货</th>
+        </tr>
+    </thead>
+    <tbody>   
+
+  
+    	{volist name='shoppingcart' id='user'}
+	  	            <tr> 
+	    		<td>{$user['title']}</td>
+	    		<td>{$user['price']}</td>
+	            <td>
+                    <div class="navbar-form navbar-left">
+                        <a class=" btn btn-default btn-xs" href="{:url('details',['id'=>$user.goodsid])}">详细信息</a>
+                    </div>
+                </td>
+	            <td>
+                         <div class="navbar-form navbar-left">
+                                <a class=" btn btn-default btn-xs" href="{:url('index/orders','')}">去支付</a>
+                            </div>
+                </td>
+                <td>
+                  
+
+
+
+                    <form class="navbar-form navbar-left" role="search" action="" method="post">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control"  name="delid" 
+                                                        value={$user['id']}>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default btn-xs" >删除订单 </button>
+                                                        </form>
+
+                </td>
+                <td>
+                                                    <form class="navbar-form navbar-left" role="search" action="" method="post">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control"  name="delid" 
+                                                        value={$user['id']}>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default btn-xs" >确认收货 </button>
+                                                        </form>
+                </td>
+	 	    </tr>
+	    
+       	{/volist}
+       
+    </tbody>
+</table>
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

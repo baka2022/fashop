@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.v{
+	width: 1180px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+a{
+	text-decoration: none;
+}
+.crumbs{
+	
+	height: 56px;
+	line-height: 56px;
+	color: #999;
+	font-size: 16px;
+}
+.crumbs p{
+	display: inline;
+	position: relative;
+	color: orangered;
+}
+.city-list{
+	background: #fff;
+	border: 1px solid #d3d3d3;
+	padding: 0 20px;	
+}
+.city-list .alone{
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	border-bottom: 1px solid #d3d3d3;
+}
+.city-list .hot{
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	color: orangered;
+}
+.city-list .alone a{
+	line-height: 45px;
+	font-size: 16px;
+	margin-right: 20px;
+	
+}
+a:hover{
+	color: orangered;
+}
+.city-list .often{
+	margin-top: 50px;
+}
+ul{
+	list-style: none;
+}
+.city-list .often .ordinary-list{
+	overflow: hidden;
+}
+.city-list .often .ordinary-list .item{
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.city-list .often .ordinary-list .item .letter{
+	float: left;
+	margin-right: 10px;
+	width: 44px;
+	height: 44px;
+	border: 1px solid #d3d3d3;
+	color: #666;
+	font-size: 20px;
+	line-height: 44px;
+	text-align: center;
+}
+.city-list .often .ordinary-list .item  .ordinary-city{
+	margin-left: 60px;
+	overflow: hidden;
+	min-height: 46px;
+}
+.city-list .often .ordinary-list .item  .ordinary-city .item{
+	
+	height:35px ;
+	margin-right: 20px;
+}
+.city-list .often .ordinary-list .item  .ordinary-city .item a{
+	color:#666;
+	font-size: 16px;
+	text-decoration: none;
+	line-height: 35px;
+	margin-right: 20px;
+	float: left;
+	
+}
+.city-list .often .ordinary-list .item  .ordinary-city .item a:hover{
+	color:orangered;
+}
